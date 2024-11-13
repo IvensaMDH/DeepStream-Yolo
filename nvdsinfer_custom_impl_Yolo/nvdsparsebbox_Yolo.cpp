@@ -47,9 +47,9 @@ convertBBox(const float& bx1, const float& by1, const float& bx2, const float& b
   y2 = clamp(y2, 0, netH - 1);
 
   b.left = x1;
-  b.width = clamp(x2 - x1, 0, netW - 1);
+  b.width = clamp(x2 - x1, 0, netW - 100);
   b.top = y1;
-  b.height = clamp(y2 - y1, 0, netH - 1);
+  b.height = clamp(y2 - y1, 0, netH - 100);
 
   return b;
 }
