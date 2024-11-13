@@ -41,15 +41,15 @@ convertBBox(const float& bx1, const float& by1, const float& bx2, const float& b
   float x2 = bx2;
   float y2 = by2;
 
-  x1 = clamp(x1, 0, netW);
-  y1 = clamp(y1, 0, netH);
-  x2 = clamp(x2, 0, netW);
-  y2 = clamp(y2, 0, netH);
+  x1 = clamp(x1, 0, netW - 1);
+  y1 = clamp(y1, 0, netH - 1);
+  x2 = clamp(x2, 0, netW - 1);
+  y2 = clamp(y2, 0, netH - 1);
 
   b.left = x1;
-  b.width = clamp(x2 - x1, 0, netW - 10);
-  b.top = y1;
-  b.height = clamp(y2 - y1, 0, netH - 10);
+  b.width = clamp(x2 - x1, 0, netW - 1);
+  b.top = y1 - 50;
+  b.height = clamp(y2 - y1, 0, netH - 1);
 
   return b;
 }
